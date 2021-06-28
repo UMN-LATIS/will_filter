@@ -35,7 +35,7 @@ module WillFilter
     extend ActiveSupport::Concern
 
     module ClassMethods
-      def filter(opts = {})
+      def filterwf(opts = {})
         if ActiveRecord::Base == self.class
           raise WillFilter::FilterException.new("Cannot apply filter to the ActiveRecord::Base object")
         end
